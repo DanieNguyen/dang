@@ -1,8 +1,9 @@
-import { device } from '../components/devices';
+import { device } from '../../components/devices';
 import styled from 'styled-components';
-import Checklist from '../components/checklist';
 import { motion } from 'framer-motion';
-import Nav from '../components/nav';
+import Nav from '../../components/nav';
+import Head from 'next/head';
+import Quote from '../../components/quote';
 
 const H1 = styled.h1`
     font-family: 'Basier-Bold';
@@ -19,10 +20,10 @@ const H1 = styled.h1`
 const H2 = styled.h2`
     font-family: 'Basier-Bold';
     font-size: 1.5rem;
-    margin: 3rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     @media ${device.laptop} {
         font-size: 2rem;
-        margin: 4rem 0 2rem 0;
+        margin: 3rem 0 1rem 0;
     }
     color: ${({ theme }) => theme.colors.text};
 `;
@@ -50,27 +51,26 @@ const Tag = styled.div`
     justify-content: center;
     font-size: 0.875rem;
     font-family: 'Basier-Bold';
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.pink};
     color: ${({ theme }) => theme.colors.text};
 `;
 
 export default function index() {
     return (
         <div>
+            <Head>
+                <link
+                    rel='stylesheet'
+                    href='https://use.typekit.net/pqx5okm.css'
+                />
+            </Head>
             <Nav></Nav>
-            <H1>Done is better than perfect. </H1>
-            <Tag>Updated June 23 2020</Tag>
+            <H1>Hello World! </H1>
+            <Tag>Posted on June 23 2020</Tag>
             <P>
-                With everything going on in the world and my life, it's been
-                hard to work on my portfolio. But, I'm going to hold myself
-                accountable while taking time to design intentionally.
+               This is my first blog post ever. I'm not really sure how to start blogging, but let's go.
             </P>
-            <P>
-                This changelog shows everything I've thought of, done, and hope
-                to do with my portfolio!
-            </P>
-            <H2>To Do</H2>
-            <Checklist></Checklist>
+            <H2>Moving Out</H2>
         </div>
     );
 }

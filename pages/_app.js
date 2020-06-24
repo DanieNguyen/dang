@@ -1,7 +1,7 @@
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { AnimatePresence } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
 import Layout from '../components/layout';
 
 const GlobalStyle = createGlobalStyle`
@@ -42,6 +42,18 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
+        font-family: 'Basier-Medium';
+        src: url('/static/fonts/basiersquare-medium-webfont.eot');
+        src: url('/static/fonts/basiersquare-medium-webfont.eot?#iefix') format('embedded-opentype'),
+             url('/static/fonts/basiersquare-medium-webfont.woff2') format('woff2'),
+             url('/static/fonts/basiersquare-medium-webfont.woff') format('woff'),
+             url('/static/fonts/basiersquare-medium-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        kerning: normal;
+    }
+
+    @font-face {
         font-family: 'Basier-Mono';
         src: url('/static/fonts/basiersquaremono-regular-webfont.eot');
         src: url('/static/fonts/basiersquaremono-regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -75,6 +87,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
         height: 100%;
         weight: 100%;
+        color: ${({ theme }) => theme.colors.text};
     }
 `;
 
@@ -82,9 +95,10 @@ const theme = {
     colors: {
         primary: '#C2F8FF',
         text: '#353D45',
-        pink: '#E8B0B6',
-        white: '#FFFDEB',
+        pink: '#EDC0C4',
+        white: '#F3F4F7',
         gray: '#adb5bd',
+        darkgray: '#696969',
     },
 };
 
@@ -94,10 +108,10 @@ export default class MyApp extends App {
         return (
             <ThemeProvider theme={theme}>
                 <Layout>
-                    <AnimatePresence exitBeforeEnter>
-                        <GlobalStyle />
-                        <Component {...pageProps} />
-                    </AnimatePresence>
+                    {/* <AnimatePresence exitBeforeEnter> */}
+                    <GlobalStyle />
+                    <Component {...pageProps} />
+                    {/* </AnimatePresence> */}
                 </Layout>
             </ThemeProvider>
         );

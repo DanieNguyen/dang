@@ -1,0 +1,64 @@
+import Head from 'next/head';
+import Link from 'next/link';
+import styled from 'styled-components';
+import { CheckSquare, Square, EyeOff } from 'react-feather';
+import { device } from './devices';
+
+const NavBar = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    @media ${device.tablet} {
+        margin-top: 4rem;
+    }
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+`;
+
+const Right = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+const NavItem = styled.a`
+    font-family: 'Basier-Medium';
+    font-size: 1rem;
+    &:hover {
+        cursor: grab;
+        background-color: ${({ theme }) => theme.colors.white};
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    width: 4rem;
+    height: 2rem;
+`;
+
+const P = styled.p`
+    font-family: 'Basier-Medium';
+    font-size: 1rem;
+`;
+
+export default function nav() {
+    return (
+        <NavBar>
+            <div>
+                <Link href='/'>
+                    <NavItem>Home</NavItem>
+                </Link>
+            </div>
+            <Right>
+                <Link href='/blog'>
+                    <NavItem>Blog</NavItem>
+                </Link>
+                <Link href='/'>
+                    <NavItem>About</NavItem>
+                </Link>
+                <Link href='/'>
+                    <NavItem>Docs</NavItem>
+                </Link>
+            </Right>
+        </NavBar>
+    );
+}

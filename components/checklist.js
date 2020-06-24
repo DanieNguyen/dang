@@ -1,18 +1,17 @@
 import styled from 'styled-components';
-import React from 'react';
 import { CheckSquare, Square, EyeOff } from 'react-feather';
 import { device } from '../components/devices';
 
 const Do = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin: 1rem 0 0 1rem;
-    line-height: 1.5rem;
+    line-height: 1.4rem;
     font-size: 1rem;
     @media ${device.tablet} {
         font-size: 1.25rem;
-        line-height: 1.75rem;
+        line-height: 1.5rem;
         margin: 1rem 0 2rem 2rem;
     }
     color: ${({ theme }) => theme.colors.text};
@@ -31,18 +30,26 @@ const P = styled.p`
     }
 `;
 
+const Icon = styled.div`
+    flex-shrink: 0;
+`;
+
 const Todo = (props) => {
     if (props.done) {
         return (
             <Done>
-                <CheckSquare size={24}></CheckSquare>
+                <Icon>
+                    <CheckSquare size={24}></CheckSquare>
+                </Icon>
                 <P>{props.children}</P>
             </Done>
         );
     } else {
         return (
             <Do>
-                <Square size={24}></Square>
+                <Icon>
+                    <Square size={24}></Square>
+                </Icon>
                 <P>{props.children}</P>
             </Do>
         );
@@ -52,7 +59,11 @@ const Todo = (props) => {
 export default function checklist() {
     return (
         <div>
-            <Todo done={false}>Design navigation buttons</Todo>
+            <Todo done={false}>Design a blog post</Todo>
+            <Todo done={true}>Code a list of posts</Todo>
+            <Todo done={true}>Make a blog section</Todo>
+            <Todo done={true}>Design a quote</Todo>
+            <Todo done={true}>Design site navigation</Todo>
             <Todo done={false}>Create typographic scale</Todo>
             <Todo done={true}>Make the changelog responsive</Todo>
             <Todo done={true}>Make the changelog page</Todo>
@@ -62,7 +73,9 @@ export default function checklist() {
             <Todo done={true}>Decide to code my new portfolio</Todo>
             <Todo done={true}>Compare new web design tools</Todo>
             <Todo done={true}>Look at old portfolio with disgust</Todo>
-            <Todo done={true}>Find inspiration on Pinterest and Bestfolios</Todo>
+            <Todo done={true}>
+                Find inspiration on Pinterest and Bestfolios
+            </Todo>
             <Todo done={true}>Motivate self to work on portfolio</Todo>
             <Todo done={true}>Have a quarter-life existential crisis</Todo>
         </div>
