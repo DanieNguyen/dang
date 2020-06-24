@@ -59,7 +59,7 @@ export default function checklist() {
             <Todo done={true}>Code a To Do list</Todo>
             <Todo done={true}>Create an accessible color scheme</Todo>
             <Todo done={true}>Decide on fonts</Todo>
-            <Todo done={true}>Make it harder and decide to code my new portfolio</Todo>
+            <Todo done={true}>Decide to code my new portfolio</Todo>
             <Todo done={true}>Compare new web design tools</Todo>
             <Todo done={true}>Look at old portfolio with disgust</Todo>
             <Todo done={true}>Find inspiration on Pinterest and Bestfolios</Todo>

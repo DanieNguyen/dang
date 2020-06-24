@@ -1,6 +1,8 @@
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import { AnimatePresence } from 'framer-motion';
+import Layout from '../components/layout';
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -91,8 +93,12 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props;
         return (
             <ThemeProvider theme={theme}>
-                <GlobalStyle />
-                <Component {...pageProps} />
+                <Layout>
+                    <AnimatePresence exitBeforeEnter>
+                        <GlobalStyle />
+                        <Component {...pageProps} />
+                    </AnimatePresence>
+                </Layout>
             </ThemeProvider>
         );
     }
