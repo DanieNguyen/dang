@@ -1,6 +1,6 @@
 import { device } from '../components/devices';
 import styled from 'styled-components';
-import Checklist from '../components/checklist';
+import Cases from '../components/cases';
 import { motion } from 'framer-motion';
 import Nav from '../components/nav';
 
@@ -66,6 +66,7 @@ export default function index() {
             </P>
             <P>Right now, I am longboarding, educating myself on systematic racism, and looking for full time jobs and internships.</P>
             <H2>Featured Works</H2>
+            <Cases></Cases>
         </div>
     );
 }

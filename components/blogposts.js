@@ -44,13 +44,17 @@ const Snippet = styled.p`
     }
 `;
 
+const Snip = styled(Snippet)`
+    margin-right: 1rem;
+`
+
 const Post = (props) => {
     return (
         <Link href={props.link} passHref>
             <Container>
                 <Title>{props.children}</Title>
                 <Div>
-                <Snippet>{props.sub}</Snippet>
+                <Snip>{props.sub}</Snip>
                 <Snippet>{props.date}</Snippet>
                 </Div>
             </Container>
