@@ -14,7 +14,7 @@ const Layout = styled.div`
         width: 40%;
     }
     margin: auto;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0 4rem 0;
 `;
 
 export default function layout({ children }) {

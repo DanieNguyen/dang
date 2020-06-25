@@ -1,9 +1,9 @@
-import { device } from '../../components/devices';
+import { device } from '../components/devices';
 import styled from 'styled-components';
+import Checklist from '../components/checklist';
 import { motion } from 'framer-motion';
-import Nav from '../../components/nav';
-import Head from 'next/head';
-import Quote from '../../components/quote';
+import Nav from '../components/nav';
+import Quote from '../components/quote';
 
 const H1 = styled.h1`
     font-family: 'Basier-Bold';
@@ -20,10 +20,10 @@ const H1 = styled.h1`
 const H2 = styled.h2`
     font-family: 'Basier-Bold';
     font-size: 1.5rem;
-    margin: 2rem 0 1rem 0;
+    margin: 3rem 0 1rem 0;
     @media ${device.laptop} {
         font-size: 2rem;
-        margin: 3rem 0 1rem 0;
+        margin: 4rem 0 2rem 0;
     }
     color: ${({ theme }) => theme.colors.text};
 `;
@@ -43,7 +43,7 @@ const P = styled.p`
 `;
 
 const Tag = styled.div`
-    width: 12rem;
+    width: 6rem;
     height: 2rem;
     border-radius: 0.25rem;
     display: flex;
@@ -55,22 +55,24 @@ const Tag = styled.div`
     color: ${({ theme }) => theme.colors.text};
 `;
 
-export default function index() {
+export default function about() {
     return (
         <div>
-            <Head>
-                <link
-                    rel='stylesheet'
-                    href='https://use.typekit.net/pqx5okm.css'
-                />
-            </Head>
             <Nav></Nav>
-            <H1>Hello World! </H1>
-            <Tag>Posted on June 23 2020</Tag>
+            <H1>I'm bad with icebreakers. </H1>
+            <Tag>Seriously...</Tag>
+            <Quote
+                author={
+                    'Me panicking for a fun fact just to say the most recent hobby I tried 😑'
+                }>
+                Hi, my name is Daniel and I am a junior product designer. My fun
+                fact is that I like to longboard.
+            </Quote>
+            <H2>About Me</H2>
             <P>
-               This is my first blog post ever. I'm not really sure how to start blogging, but let's go.
+                I graduated in June from the University of Washington with a degree
+                in Human Centered Design and Engineering. 
             </P>
-            <H2>Moving Out</H2>
         </div>
     );
 }

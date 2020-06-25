@@ -20,6 +20,13 @@ const Title = styled.h1`
     font-size: 1.25rem;
 `;
 
+const Div = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+`
+
 const Snippet = styled.p`
     color: ${({ theme }) => theme.colors.darkgray};
     font-family: 'Bressay';
@@ -39,10 +46,13 @@ const Snippet = styled.p`
 
 const Post = (props) => {
     return (
-        <Link href='/blog/helloworld'>
+        <Link href={props.link} passHref>
             <Container>
                 <Title>{props.children}</Title>
+                <Div>
                 <Snippet>{props.sub}</Snippet>
+                <Snippet>{props.date}</Snippet>
+                </Div>
             </Container>
         </Link>
     );
@@ -52,9 +62,11 @@ export default function Posts() {
     return (
         <div>
             <Post
+                link={'/blog/moving'}
                 sub={
-                    'My garage is Sakaar (the junkyard planet) from the Marvel movies'
-                }>
+                    'I have officially self-diagnosed myself as a hoarder.'
+                }
+                date = {'June 23 2020'}>
                 Moving is sooooo much work
             </Post>
         </div>

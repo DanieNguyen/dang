@@ -42,7 +42,7 @@ const P = styled.p`
 `;
 
 const Tag = styled.div`
-    width: 10rem;
+    width: 12rem;
     height: 2rem;
     border-radius: 0.25rem;
     display: flex;
@@ -54,18 +54,23 @@ const Tag = styled.div`
     color: ${({ theme }) => theme.colors.text};
 `;
 
-export default function index() {
+export default function docs() {
     return (
         <div>
             <Nav></Nav>
-            <H1>Hi, I'm Daniel. </H1>
-            <Tag>Product Designer</Tag>
+            <H1>Done is better than perfect. </H1>
+            <Tag>Updated June 23 2020</Tag>
             <P>
-                I'm a young designer determined to design inclusive and
-                accessible products that positively impact the world.
+                With everything going on in the world and my life, it's been
+                hard to work on my portfolio. But, I'm going to hold myself
+                accountable while taking time to design intentionally.
             </P>
-            <P>Right now, I am longboarding, educating myself on systematic racism, and looking for full time jobs and internships.</P>
-            <H2>Featured Works</H2>
+            <P>
+                This changelog shows everything I've thought of, done, and hope
+                to do with my portfolio!
+            </P>
+            <H2>To Do</H2>
+            <Checklist></Checklist>
         </div>
     );
 }

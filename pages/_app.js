@@ -89,6 +89,11 @@ const GlobalStyle = createGlobalStyle`
         weight: 100%;
         color: ${({ theme }) => theme.colors.text};
     }
+
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.text};
+    }
 `;
 
 const theme = {
@@ -99,6 +104,7 @@ const theme = {
         white: '#F3F4F7',
         gray: '#adb5bd',
         darkgray: '#696969',
+        peach: '#FFC299',
     },
 };
 

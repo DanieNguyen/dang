@@ -6,7 +6,7 @@ const QuoteBox = styled.div`
     margin: 2rem 0 0 0;
     padding: 1rem 0rem 1rem 1rem;
     @media ${device.tablet} {
-        margin: 3rem 0 1rem 0;
+        margin: 2rem 0 2rem 0;
         padding: 1rem 0rem 1rem 2rem;
     }
 `;

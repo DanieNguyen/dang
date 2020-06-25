@@ -44,18 +44,18 @@ export default function nav() {
     return (
         <NavBar>
             <div>
-                <Link href='/'>
+                <Link href='/' passHref>
                     <NavItem>Home</NavItem>
                 </Link>
             </div>
             <Right>
-                <Link href='/blog'>
+                <Link href='/blog' passHref>
                     <NavItem>Blog</NavItem>
                 </Link>
-                <Link href='/'>
+                <Link href='/about'passHref>
                     <NavItem>About</NavItem>
                 </Link>
-                <Link href='/'>
+                <Link href='/docs' passHref>
                     <NavItem>Docs</NavItem>
                 </Link>
             </Right>
