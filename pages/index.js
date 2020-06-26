@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Cases from '../components/cases';
 import { motion } from 'framer-motion';
 import Nav from '../components/nav';
+import Header from '../components/move';
 
 const H1 = styled.h1`
     font-family: 'Basier-Bold';
@@ -57,6 +58,7 @@ const Tag = styled.div`
 export default function index() {
     return (
         <div>
+            <Header></Header>
             <Nav></Nav>
             <H1>Hi, I'm Daniel. </H1>
             <Tag>Product Designer</Tag>
@@ -64,7 +66,10 @@ export default function index() {
                 I'm a young designer determined to design inclusive and
                 accessible products that positively impact the world.
             </P>
-            <P>Right now, I am longboarding, educating myself on systematic racism, and looking for full time jobs and internships.</P>
+            <P>
+                Right now, I am longboarding, educating myself on systematic
+                racism, and looking for full time jobs and internships.
+            </P>
             <H2>Featured Works</H2>
             <Cases></Cases>
         </div>

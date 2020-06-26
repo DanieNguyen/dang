@@ -59,9 +59,10 @@ const Todo = (props) => {
 export default function checklist() {
     return (
         <div>
+            <Todo done={false}>Create case studies for projects</Todo>
             <Todo done={false}>Design active state for navigation</Todo>
-            <Todo done={false}>Design the homepage</Todo>
-            <Todo done={false}>Make an about section</Todo>
+            <Todo done={true}>Design the homepage</Todo>
+            <Todo done={true}>Make an about section</Todo>
             <Todo done={true}>Write a blog post</Todo>
             <Todo done={true}>Design a blog post</Todo>
             <Todo done={true}>Code a list of posts</Todo>

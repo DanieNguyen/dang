@@ -54,7 +54,7 @@ const Tag = styled.div`
     color: ${({ theme }) => theme.colors.text};
 `;
 
-export default function about() {
+export default function la() {
     return (
         <div>
             <Nav></Nav>

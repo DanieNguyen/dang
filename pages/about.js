@@ -55,24 +55,32 @@ const Tag = styled.div`
     color: ${({ theme }) => theme.colors.text};
 `;
 
+const A = styled.a`
+    color: ${({ theme }) => theme.colors.pink};
+    &:hover {
+        border-bottom: 2px solid ${({ theme }) => theme.colors.pink};
+    }
+`
+
 export default function about() {
     return (
         <div>
             <Nav></Nav>
             <H1>I'm bad with icebreakers. </H1>
-            <Tag>But...</Tag>
-            <Quote
-                author={
-                    'Me'
-                }>
+            <Quote>
                 Hi, my name is Daniel and I am a junior product designer. My fun
                 fact is that I like to longboard.
             </Quote>
             <H2>About Me</H2>
             <P>
-                I graduated in June from the University of Washington with a degree
-                in Human Centered Design and Engineering. 
+                I am a young product designer hoping to make waves 🌊 in the world
+                through designing positive human computer interactions for
+                everyone. I am a firm believer in <b>participatory design, human-centered design, and inclusive design. </b>
             </P>
+            <P>Right now, I am very interested in design systems, AR, typography (please send me fonts), and interactive web apps.</P>
+            <br/ >
+            <P>Outside of design, I really enjoy longboarding, playing video games, trying new restaurants, and my dog.</P>
+            <P>Thanks for reading about me! Feel free to contact me through <A href="tel:4252159646">phone</A>, <A href=":mailto:danngu@uw.edu">email</A>, or <A href="https://www.linkedin.com/in/danielux/">LinkedIn!</A></P>
         </div>
     );
 }

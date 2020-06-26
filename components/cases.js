@@ -117,13 +117,13 @@ export default function cases() {
                     }>
                     Assisting police officers patrol on foot.
                 </Case>
-                <Case
+                {/* <Case
                     title={'LA Fitness'}
                     link={'/projects/la'}
                     img={'../static/images/la.png'}
                     tags={'Mobile, Animation, User Research'}>
                     Supporting gym members with their fitness goals.
-                </Case>
+                </Case> */}
             </Grid>
         </div>
     );
