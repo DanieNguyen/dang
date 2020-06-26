@@ -94,22 +94,22 @@ export default function cases() {
         <div>
             <Grid>
                 <Case
-                    title={'UW Canvas'}
-                    link={'/'}
+                    title={'Study Groups'}
+                    link={'/projects/canvas'}
                     img={'../static/images/canvas2.png'}
                     tags={'Website, Animation, User Research'}>
                     Promoting student communities in online learning.
                 </Case>
                 <Case
                     title={'Vita OS'}
-                    link={'/'}
+                    link={'/projects/vita'}
                     img={'../static/images/vita2.png'}
                     tags={'Mobile, Branding, Design Systems'}>
                     Helping young adults live intentionally.
                 </Case>
                 <Case
                     title={'Dispatch.'}
-                    link={'/'}
+                    link={'/projects/dispatch'}
                     img={'../static/images/dispatch.png'}
                     tags={'Award-Winning, Mobile, Branding'}
                     note={
@@ -119,7 +119,7 @@ export default function cases() {
                 </Case>
                 <Case
                     title={'LA Fitness'}
-                    link={'/'}
+                    link={'/projects/la'}
                     img={'../static/images/la.png'}
                     tags={'Mobile, Animation, User Research'}>
                     Supporting gym members with their fitness goals.

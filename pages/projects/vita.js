@@ -1,9 +1,8 @@
-import { device } from '../components/devices';
+import { device } from '../../components/devices';
 import styled from 'styled-components';
-import Checklist from '../components/checklist';
 import { motion } from 'framer-motion';
-import Nav from '../components/nav';
-import Quote from '../components/quote';
+import Nav from '../../components/nav';
+import Quote from '../../components/quote';
 
 const H1 = styled.h1`
     font-family: 'Basier-Bold';
@@ -51,7 +50,7 @@ const Tag = styled.div`
     justify-content: center;
     font-size: 0.875rem;
     font-family: 'Basier-Bold';
-    background-color: ${({ theme }) => theme.colors.pink};
+    background-color: #FD9EA1;
     color: ${({ theme }) => theme.colors.text};
 `;
 
@@ -59,19 +58,12 @@ export default function about() {
     return (
         <div>
             <Nav></Nav>
-            <H1>I'm bad with icebreakers. </H1>
-            <Tag>But...</Tag>
-            <Quote
-                author={
-                    'Me'
-                }>
-                Hi, my name is Daniel and I am a junior product designer. My fun
-                fact is that I like to longboard.
-            </Quote>
-            <H2>About Me</H2>
+            <H1>Vita OS. </H1>
+            <Tag>Mobile OS</Tag>
             <P>
-                I graduated in June from the University of Washington with a degree
-                in Human Centered Design and Engineering. 
+                Dispatch is a modern system for mobilizing the police force
+                efficiently, effectively, and safely. Keeping our officers and
+                community protected and at ease.
             </P>
         </div>
     );
