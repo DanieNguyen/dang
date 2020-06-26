@@ -8,7 +8,7 @@ const Layout = styled.div`
         width: 75%;
     }
     @media ${device.laptop} {
-        width: 50%;
+        width: 60%;
     }
     @media ${device.desktop} {
         width: 40%;

@@ -22,7 +22,7 @@ const H2 = styled.h2`
     margin: 3rem 0 1rem 0;
     @media ${device.laptop} {
         font-size: 2rem;
-        margin: 4rem 0 2rem 0;
+        margin: 6rem 0 2rem 0;
     }
     color: ${({ theme }) => theme.colors.text};
 `;

@@ -24,7 +24,7 @@ const NavItem = styled.a`
     font-family: 'Basier-Medium';
     font-size: 1rem;
     &:hover {
-        cursor: grab;
+        cursor: pointer;
         background-color: ${({ theme }) => theme.colors.white};
     }
     display: flex;
