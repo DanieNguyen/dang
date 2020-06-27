@@ -54,6 +54,14 @@ const Tag = styled.div`
     color: white;
 `;
 
+const Container = styled.div`
+    height: 200px;
+    @media ${device.tablet} {
+        width: 512px;
+        height: 300px;
+    }
+`
+
 export default function about() {
     return (
         <div>
@@ -81,13 +89,15 @@ export default function about() {
                 animations.
             </P>
             <H2>Project Video</H2>
-            <iframe
-                width='560'
-                height='315'
-                src='https://www.youtube.com/embed/q-P55l8iAx0'
-                frameborder='0'
-                allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-                allowfullscreen></iframe>
+            <Container>
+                <iframe
+                    width='100%'
+                    height='100%'
+                    src='https://www.youtube.com/embed/q-P55l8iAx0'
+                    frameborder='0'
+                    allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                    allowfullscreen></iframe>
+            </Container>
         </div>
     );
 }
