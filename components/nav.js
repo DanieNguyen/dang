@@ -12,7 +12,7 @@ const NavBar = styled(motion.nav)`
 	align-items: center;
 	margin-top: 1rem;
 	@media ${device.tablet} {
-		margin-top: 4rem;
+		margin-top: 3rem;
 	}
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
