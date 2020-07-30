@@ -18,21 +18,21 @@ const Tag = styled(motion.div)`
 `;
 
 const container = {
-	hidden: { opacity: 0 },
+	hidden: { opacity: 0, y: 40},
 	show: {
+		y: 0,
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.8,
-			delayChildren: 0.6,
-			duration: 1.6,
-			easing: "EaseOut",
+			staggerChildren: 0.3,
+			duration: 2.4,
+			easing: [0.16, 1, 0.3, 1],
 		},
 	},
 };
 
 const item = {
-	hidden: { opacity: 0, y: 10 },
-	show: { opacity: 1, y: 0 },
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
 };
 
 export default function index() {
@@ -53,7 +53,7 @@ export default function index() {
 				Right now, I am longboarding, educating myself on systematic
 				racism, and looking for full time jobs and internships.
 			</motion.p>
-			<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0, transition: { delay: 4, duration: 0.8}}}>
+			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.8, delay: 1.2 }}}>
 				<motion.h2>Featured Works</motion.h2>
 				<Cases></Cases>
 			</motion.div>
