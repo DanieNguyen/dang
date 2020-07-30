@@ -8,11 +8,15 @@ const Layout = styled.div`
         width: 75%;
     }
     @media ${device.laptop} {
-        width: 60%;
+        width: 55%;
+    }
+    @media ${device.laptopL} {
+        width: 50%;
     }
     @media ${device.desktop} {
-        width: 40%;
+        width: 35%;
     }
+
     margin: auto;
     padding: 1rem 0 4rem 0;
 `;

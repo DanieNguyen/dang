@@ -17,17 +17,20 @@ const Do = styled.div`
     color: ${({ theme }) => theme.colors.text};
 `;
 
-const Done = styled(Do)`
-    color: ${({ theme }) => theme.colors.gray};
-    text-decoration: line-through;
-`;
-
 const P = styled.p`
     font-family: 'Basier';
-    margin-left: 1rem;
+    margin: 0 0 0 1rem;
     @media ${device.tablet} {
-        margin-left: 2rem;
+        margin: 0 0 0 2rem;
     }
+`;
+
+const Done = styled(Do)`
+    color: ${({ theme }) => theme.colors.gray};
+    ${P} {
+        color: ${({ theme }) => theme.colors.gray};
+    }
+    text-decoration: line-through;
 `;
 
 const Icon = styled.div`
