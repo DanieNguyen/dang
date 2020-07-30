@@ -23,8 +23,8 @@ const container = {
 		y: 0,
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.3,
-			duration: 2.4,
+			staggerChildren: 0.2,
+			duration: 1.4,
 			easing: [0.16, 1, 0.3, 1],
 		},
 	},
@@ -37,12 +37,13 @@ const item = {
 
 export default function index() {
 	return (
+		<div>
+		<Nav></Nav>
 		<motion.div
 			variants={container}
 			initial='hidden'
 			animate='show'
 			exit='hidden'>
-			<Nav></Nav>
 			<motion.h1 variants={item}>Hey, I'm Daniel. </motion.h1>
 			<Tag variants={item}>Product Designer</Tag>
 			<motion.p variants={item}>
@@ -53,10 +54,11 @@ export default function index() {
 				Right now, I am longboarding, educating myself on systematic
 				racism, and looking for full time jobs and internships.
 			</motion.p>
-			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.8, delay: 1.2 }}}>
+			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.8, delay: 0.8 }}}>
 				<motion.h2>Featured Works</motion.h2>
 				<Cases></Cases>
 			</motion.div>
 		</motion.div>
+		</div>
 	);
 }
