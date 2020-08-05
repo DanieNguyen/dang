@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Cases from '../components/cases';
 import { motion } from 'framer-motion';
 import Nav from '../components/nav';
+import Head from 'next/head';
 
 const Tag = styled(motion.div)`
 	width: 10rem;
@@ -18,7 +19,7 @@ const Tag = styled(motion.div)`
 `;
 
 const container = {
-	hidden: { opacity: 0, y: 40},
+	hidden: { opacity: 0, y: 40 },
 	show: {
 		y: 0,
 		opacity: 1,
@@ -38,27 +39,39 @@ const item = {
 export default function index() {
 	return (
 		<div>
-		<Nav></Nav>
-		<motion.div
-			variants={container}
-			initial='hidden'
-			animate='show'
-			exit='hidden'>
-			<motion.h1 variants={item}>Hey, I'm Daniel. </motion.h1>
-			<Tag variants={item}>Product Designer</Tag>
-			<motion.p variants={item}>
-				I'm a young designer determined to design inclusive and
-				accessible products that positively impact the world.
-			</motion.p>
-			<motion.p variants={item}>
-				Right now, I am longboarding, educating myself on systematic
-				racism, and looking for full time jobs and internships.
-			</motion.p>
-			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.8, delay: 0.8 }}}>
-				<motion.h2>Featured Works</motion.h2>
-				<Cases></Cases>
+			<Head>
+				<title>Daniel Nguyen</title>
+				<meta
+					name='viewport'
+					content='initial-scale=1.0, width=device-width'
+				/>
+			</Head>
+			<Nav></Nav>
+			<motion.div
+				variants={container}
+				initial='hidden'
+				animate='show'
+				exit='hidden'>
+				<motion.h1 variants={item}>Hey, I'm Daniel. </motion.h1>
+				<Tag variants={item}>Product Designer</Tag>
+				<motion.p variants={item}>
+					I'm a young designer determined to design inclusive and
+					accessible products that positively impact the world.
+				</motion.p>
+				<motion.p variants={item}>
+					Right now, I am longboarding, educating myself on systematic
+					racism, and looking for full time jobs and internships.
+				</motion.p>
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{
+						opacity: 1,
+						transition: { duration: 1.4, delay: 0.8 },
+					}}>
+					<motion.h2>Featured Works</motion.h2>
+					<Cases></Cases>
+				</motion.div>
 			</motion.div>
-		</motion.div>
 		</div>
 	);
 }

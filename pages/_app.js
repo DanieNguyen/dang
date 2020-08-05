@@ -83,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-    
+
     html, body {
         font-size: 1rem;
         height: 100%;
@@ -101,7 +101,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.5rem;
         margin: 1rem 0 0 0;
         font-size: 1rem;
-        @media ${device.tablet} {
+        @media ${device.laptopL} {
             font-size: 1.125rem;
             line-height: 1.75rem;
             margin: 1rem 0 1rem 0;
@@ -114,7 +114,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 2rem;
         margin: 4rem 0 1rem 0;
         kerning: normal;
-        @media ${device.tablet} {
+        @media ${device.laptopL} {
             font-size: 2.5rem;
             margin: 6rem 0 1rem 0;
         }
@@ -125,7 +125,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Basier-Bold';
         font-size: 1.5rem;
         margin: 3rem 0 1rem 0;
-        @media ${device.laptop} {
+        @media ${device.laptopL} {
             font-size: 1.75rem;
             margin: 6rem 0 2rem 0;
         }
