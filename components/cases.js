@@ -6,11 +6,11 @@ import Link from 'next/link';
 const Grid = styled(motion.div)`
 	margin-top: 2rem;
 	@media ${device.tablet} {
-		margin-top: 4rem;
+		margin-top: 3rem;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 3rem;
-		row-gap: 1rem;
+		row-gap: 0.5rem;
 	}
 `;
 
@@ -36,13 +36,19 @@ const Tags = styled.p`
 			visibility: visible;
 		}
 	}
+	@media ${device.laptop} {
+		margin: 0 0 0 0;
+	}
+	@media ${device.laptopL} {
+		margin: -1rem 0 0 0;
+	}
 `;
 
 const Note = styled.p`
 	font-family: 'Basier-Mono';
 	font-size: 0.875rem;
 	line-height: 1rem;
-	margin: 1rem 0 4rem 0;
+	margin: 1rem 0 2rem 0;
 	color: ${({ theme }) => theme.colors.gray};
 	@media ${device.tablet} {
 		visibility: hidden;
@@ -52,9 +58,17 @@ const Note = styled.p`
 	}
 `;
 
-const children = {
-	
-}
+const H3 = styled(motion.h3)`
+	font-family: 'Basier-Bold';
+	font-size: 1rem;
+	margin: 2rem 0 0rem 0;
+	@media ${device.laptop} {
+		font-size: 1.5rem;
+		margin: 2rem 0 0.5rem 0;
+	}
+	color: ${({ theme }) => theme.colors.text};
+`;
+
 const Case = (props) => {
 	return (
 		<motion.div>
@@ -66,7 +80,7 @@ const Case = (props) => {
 						<Img src={props.img}></Img>
 					</motion.div>
 					<Text>
-						<h3>{props.title}</h3>
+						<H3>{props.title}</H3>
 						<p>{props.children}</p>
 						<Tags>{props.tags}</Tags>
 						<Note>{props.note}</Note>

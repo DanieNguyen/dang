@@ -19,22 +19,33 @@ const Tag = styled(motion.div)`
 `;
 
 const container = {
-	hidden: { opacity: 0, y: 40 },
+	hidden: { opacity: 0.5, y: 40 },
 	show: {
 		y: 0,
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.2,
-			duration: 1.4,
-			easing: [0.16, 1, 0.3, 1],
+			staggerChildren: 0.1,
+			duration: 1.6,
+			easing: [0.61, 1, 0.88, 1],
 		},
 	},
 };
 
 const item = {
 	hidden: { opacity: 0 },
-	show: { opacity: 1 },
+	show: {
+		opacity: 1,
+	},
 };
+
+const Intro = styled(motion.p)`
+	@media ${device.laptop} {
+		width: 75%;
+	}
+	@media ${device.desktop} {
+		width: 65%;
+	}
+`;
 
 export default function index() {
 	return (
@@ -54,21 +65,16 @@ export default function index() {
 				exit='hidden'>
 				<motion.h1 variants={item}>Hey, I'm Daniel. </motion.h1>
 				<Tag variants={item}>Product Designer</Tag>
-				<motion.p variants={item}>
+				<Intro variants={item}>
 					I'm a young designer determined to design inclusive and
 					accessible products that positively impact the world.
-				</motion.p>
-				<motion.p variants={item}>
+				</Intro>
+				<Intro variants={item}>
 					Right now, I am longboarding, educating myself on systematic
 					racism, and looking for full time jobs and internships.
-				</motion.p>
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{
-						opacity: 1,
-						transition: { duration: 1.4, delay: 0.8 },
-					}}>
-					<motion.h2>Featured Works</motion.h2>
+				</Intro>
+				<motion.h2 variants={item}>Featured Works</motion.h2>
+				<motion.div variants={item}>
 					<Cases></Cases>
 				</motion.div>
 			</motion.div>
