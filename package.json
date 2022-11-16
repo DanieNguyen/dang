@@ -10,7 +10,7 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.24",
     "framer-motion": "^1.11.1",
-    "next": "9.4.4",
+    "next": "13.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-feather": "^2.0.8",
